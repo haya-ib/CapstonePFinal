@@ -1,0 +1,369 @@
+html,body{
+  background-color: #efefef !important;
+  font: 12px Arial;
+ height: 100%;
+ position: relative;
+}
+/** https://medium.com/@zerox/keep-that-damn-footer-at-the-bottom-c7a921cb9551 this help my footer to move when go to another web page **/
+.main-container {
+ min-height: 100vh !important; /* will cover the 100% of viewport */
+ overflow: hidden !important;
+ display: block !important;
+ position: relative !important;
+ padding-bottom: 100px !important; /* height of your footer */
+}
+.footer {
+ position: absolute !important;
+ bottom: 0 !important;
+ width: 100% !important;
+  background-color: #bbbbbb !important;
+  font-family: 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', monospace;
+  color: white;
+}
+
+div.first{
+    margin: 30px !important;
+}
+
+h1, h3{
+   color: darksalmon !important;
+   text-align: center !important;
+   font-family: 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', monospace !important;
+   margin: 5% !important;
+}
+
+div.second{
+    margin-right: 200px !important;
+    margin-left: 200px !important;
+    margin-top: 100px; !important;
+    border: 4px dotted white !important;
+    padding: 3%;
+
+}
+
+div.textboxsearch{
+    margin-right: 200px !important;
+    margin-left: 200px !important;
+    margin-top: 100px; !important;
+    padding: 3%;
+    padding-bottom: 80px;
+    border: 4px dotted white !important;
+}
+
+label{
+   float: left!important;
+   color: gray !important;
+   font-family: 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', monospace;
+   font-size: 20px !important;
+   margin-right: 30px;
+   font-synthesis: small-caps;
+}
+div.thrid{
+    margin-right: 200px !important;
+    margin-left: 200px !important;
+    margin-top: 50px; !important;
+    padding: 3%;
+    padding-bottom: 80px;
+    border: 4px dotted white !important;
+    display: none;
+}
+.bullying{
+  border: 4px dotted pink !important;
+  border-radius: 5px;
+  background-color: lightgray;
+  display:inline-block;
+  margin-top: -20px;
+  float: right;
+  padding: 20px;
+}
+#labelResult{
+  margin-left: 80px;
+  color: darksalmon;
+}
+
+
+.notBullying{
+    border: 4px dotted white !important;
+    border-radius: 5px;
+    background-color: white;
+    float: right;
+    padding: 20px;
+    display:inline-block;
+    margin-top: -50px;
+}
+/** from w3school website https://www.w3schools.com/css/css_navbar.asp **/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: darksalmon;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: gainsboro;
+}
+
+.active {
+  background-color: #bbbbbb;
+}
+
+p{
+    text-align: center;
+    font-family: "Times New Roman" , sans-serif;
+    font-size: 20px;
+    margin: 30px;
+}
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+#upload{
+    clear: both;
+    float: left;
+}
+div.resultOfFile{
+
+    margin-right: 50px !important;
+    margin-left: 50px !important;
+    margin-top: 30px; !important;
+    border: 4px dotted white !important;
+    padding: 3%;
+
+}
+
+/** from this website  https://github.com/stevenwanderski/bxslider-4 from line 156 until 338
+/** VARIABLES
+===================================*/
+/** RESET AND LAYOUT
+===================================*/
+.bx-wrapper {
+  position: relative;
+  margin-bottom: 60px;
+  padding: 0;
+  *zoom: 1;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+/** change by Haya Alhussin **/
+.bx-wrapper img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.bxslider {
+  margin: 0;
+  padding: 0;
+  /*fix flickering when used background-image instead of <img> (on Chrome)*/
+  -webkit-perspective: 1000cm;
+}
+ul.bxslider {
+  list-style: none;
+    background-color: #efefef !important; /** just edit by Haya Alhussin
+}
+.bx-viewport {
+  /* fix other elements on the page moving (in Chrome) */
+  -webkit-transform: translateZ(0);
+}
+/** THEME
+===================================*/
+.bx-wrapper {
+  -moz-box-shadow: 0 0 5px #ccc;
+  -webkit-box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px #ccc;
+  border: 5px solid #fff;
+  background: #fff;
+}
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+/* LOADER */
+.bx-wrapper .bx-loading {
+  min-height: 50px;
+  background: url('images/bx_loader.gif') center center no-repeat #ffffff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+/* PAGER */
+.bx-wrapper .bx-pager {
+  text-align: center;
+  font-size: .85em;
+  font-family: Arial, serif;
+  font-weight: bold;
+  color: #666;
+  padding-top: 20px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #666;
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  outline: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:focus {
+  background: #000;
+}
+.bx-wrapper .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  vertical-align: bottom;
+  *zoom: 1;
+  *display: inline;
+}
+.bx-wrapper .bx-pager-item {
+  font-size: 0;
+  line-height: 0;
+}
+/* DIRECTION CONTROLS (NEXT / PREV) */
+.bx-wrapper .bx-prev {
+  left: 10px;
+  background: url('images/controls.png') no-repeat 0 -32px;
+}
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus {
+  background-position: 0 0;
+}
+.bx-wrapper .bx-next {
+  right: 10px;
+  background: url('images/controls.png') no-repeat -43px -32px;
+}
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus {
+  background-position: -43px 0;
+}
+.bx-wrapper .bx-controls-direction a {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  outline: 0;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  z-index: 9999;
+}
+.bx-wrapper .bx-controls-direction a.disabled {
+  display: none;
+}
+/* AUTO CONTROLS (START / STOP) */
+.bx-wrapper .bx-controls-auto {
+  text-align: center;
+}
+.bx-wrapper .bx-controls-auto .bx-start {
+  display: block;
+  text-indent: -9999px;
+  width: 10px;
+  height: 11px;
+  outline: 0;
+  background: url('images/controls.png') -86px -11px no-repeat;
+  margin: 0 3px;
+}
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active,
+.bx-wrapper .bx-controls-auto .bx-start:focus {
+  background-position: -86px 0;
+}
+.bx-wrapper .bx-controls-auto .bx-stop {
+  display: block;
+  text-indent: -9999px;
+  width: 9px;
+  height: 11px;
+  outline: 0;
+  background: url('images/controls.png') -86px -44px no-repeat;
+  margin: 0 3px;
+}
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active,
+.bx-wrapper .bx-controls-auto .bx-stop:focus {
+  background-position: -86px -33px;
+}
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+  text-align: left;
+  width: 80%;
+}
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+  right: 0;
+  width: 35px;
+}
+/* IMAGE CAPTIONS */
+.bx-wrapper .bx-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666;
+  background: rgba(80, 80, 80, 0.75);
+  width: 100%;
+}
+.bx-wrapper .bx-caption span {
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: block;
+  font-size: .85em;
+  padding: 10px;
+}
+
+/** haya style **/ 
+div.resultvis{
+    margin-top: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+div.confisuonMatrix{
+    margin-top: 100px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+div.ReportClassification{
+
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+
+}
+figcaption{
+    text-align: center;
+    color: black;
+    font-family: Tahoma,sans-serif;
+    font-style: italic;
+}
+
+
+

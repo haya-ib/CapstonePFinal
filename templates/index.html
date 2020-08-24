@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sentiment Analysis Data Twitter</title>
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='style.css') }}">
+<!-- 3wscooh-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stu" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Datatable.net-->
+    <link rel="stu2" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
+</head>
+<body>
+        <div class="main-container">
+            {%  block pageContnent %}
+            {% endblock %}
+                <footer class="footer"> <p>&copy; 2019 Rochester Institute of Technology By Haya Alhussin </p>
+                    <div class="downloadfile">
+                            <form action="{{url_for('download')}}" method ="POST">
+                                 <div class="col-xs-4">
+                                     <button type="submit" class="btn btn-default" method="POST" style="float: left; margin-top: -30px;"> Download labeled data </button>
+                                 </div>
+                            </form>
+                    </div>
+                        <button onclick="goBack()" type="submit" class="btn btn-default" method="POST" style="float: right; margin-top: -30px;">Back to </button>
+                </footer>
+        </div>
+
+        <script src="{{ url_for('static', filename='jquery-3.3.1.js') }}"></script>
+        <script href="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="{{ url_for('static', filename='dataTables.bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='jquery.dataTables.min.js') }}"></script>
+        <script type="text/javascript" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+        <script href="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.12/jquery.csv.min.js"></script>
+        <script src="{{ url_for('static', filename='js/jquery.bxslider.js') }}"></script>
+        <script>
+            /** in this jQuery , i have been used the jQuery website to get the need to make my website nice show. https://api.jquery.com **/
+            /** Datatable was got from this website https://datatables.net**/
+            /** images slider got from this website https://bxslider.com**/
+            $(document).ready(function() {
+                 $('#example').DataTable();
+                 $('.bxslider').bxSlider();
+                 $('.downloadfile').hide('0');
+                 /**http://api.jquery.com/slidedown/**/
+                 $( ".thrid" ).slideDown( "slow" );
+
+             } );
+             $( "#upload" ).click(function() {
+                     $( ".second" ).slideUp();
+             });
+            $("#toLoad").click(function () {
+                       $(".col-xs-4").hide();
+            });
+            $('.resultvis').mousemove(function () {
+                 $(".downloadfile").show();
+            });
+             function goBack() {
+                 /** w3schools **/
+                window.history.back();
+             };
+
+        </script>
+</body>
+</html>

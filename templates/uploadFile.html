@@ -1,0 +1,19 @@
+{% extends 'Home.html' %}
+{% block uploadFile %}
+
+<div>
+<div class="second">
+    <label> Upload Your File : </label>
+    <form action="{{url_for('processUpload')}}" method = "POST"
+         enctype = "multipart/form-data"><input id="upload2" class="btn btn-default" type = "file" name = "file" style="width: 400px;"/>
+        <input id="upload" type = "submit" class="btn btn-default" style="float: right; margin-top: -35px;"/>
+    </form>
+</div>
+</div>
+
+    {% block tabelContent %}
+
+    {% endblock %}
+
+
+{% endblock %}

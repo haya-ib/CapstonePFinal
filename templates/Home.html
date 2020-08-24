@@ -1,0 +1,21 @@
+{%  extends 'index.html' %}
+{% block pageContnent %}
+<ul>
+  <li><img src="{{ url_for('static',filename='images/twitt.png') }}" style="width:47px; height:47px"></li>
+  <li><a class="active" href="{{ url_for('info') }}">Home</a></li>
+  <li><a href="{{ url_for('textSearch') }}">Search For Text</a></li>
+  <li><a id="toLoad" href="{{ url_for('uploadFile') }}">Upload file</a></li>
+  <li style="float:right"><a href="{{ url_for('about') }}">About</a></li>
+</ul>
+    {% block info %}
+    {% endblock %}
+
+    {% block processSearch %}
+    {% endblock %}
+
+    {% block uploadFile %}
+    {% endblock %}
+
+    {% block aboutDT %}
+    {% endblock %}
+{%  endblock %}

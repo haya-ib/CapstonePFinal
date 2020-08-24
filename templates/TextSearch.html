@@ -1,0 +1,14 @@
+{% extends 'Home.html' %}
+{%  block processSearch %}
+  <div class="textboxsearch">
+    <form action="{{url_for('process')}}" method ="POST">
+        <label> Search of Texts : </label>
+        <div class="col-xs-4">
+            <input type="text" class="form-control" name="message" style="width: 420px; margin-left: -20px;"></div>
+            <input id="inputQuery" type="submit" class="btn btn-default" method="POST" style="float: right;">
+    </form>
+</div>
+    {% block resultOfSearch %}
+
+    {% endblock %}
+{% endblock %}

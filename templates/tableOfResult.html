@@ -1,0 +1,50 @@
+{% extends 'uploadFile.html' %}
+{% block tabelContent %}
+    <div class="resultOfFile">
+            <table class="table table-striped table-bordered" id="example" style='width:100%'>
+              {% if data is defined %}
+                <thead>
+                    <tr>
+                        <th> Time </th>
+                        <th> TEXT </th>
+                        <th> Source</th>
+                        <th> label</th>
+                        <th> from algoritm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   {% for line in data %}
+                     <tr>
+                         <td>{{ line[0] }}</td>
+                         <td>{{ line[2] }}</td>
+                         <td>{{ line[3] }}</td>
+                         <td>{{ line[4] }}</td>
+                         <td>{{ line[5] }}</td>
+                     </tr>
+                   {% endfor %}
+                </tbody>
+                <tfoot>
+                     <tr>
+                        <th> Time </th>
+                        <th> TEXT </th>
+                        <th> Source</th>
+                        <th> label</th>
+                        <th> from algoritm DT</th>
+                      </tr>
+                 </tfoot>
+              {% endif %}
+            </table>
+  <!-- show resutl of the twitter words by the search -->
+    </div>
+
+    <div class="resultvis">
+
+       <h3> The Result of analyising the bully's words beside each of time and source : </h3>
+       <ul class="bxslider">
+           <li><img src='{{ sl }}' alt="analysis"></li>
+           <li><img src='{{ cl }}' alt="analysis1"></li>
+           <li><img src='{{ tl }}' alt="analysis2"></li>
+       </ul>
+
+    </div>
+{% endblock %}

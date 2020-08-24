@@ -1,0 +1,16 @@
+{% extends 'TextSearch.html' %}
+{% block resultOfSearch %}
+
+    <div class="thrid">
+          <label id="labelResult"> The Result of this search is showing that : </label>
+                    {% if data is defined %}
+                        {% if data==0 %}
+   		                     <div class='notBullying'> This is NOT Bully <img src="{{ url_for('static',filename='images/right.png')}}" style="width: 20px;height: 20px;"></div>
+                        {% else %}
+   		                     <div class='bullying'> This is Bully <img src="{{ url_for('static',filename='images/wrong.jpg')}}" style="width: 20px;height: 20px;"></div>
+                        {% endif %}
+                    {% endif %}
+  <!-- show resutl of the twitter words by the search -->
+     </div>
+
+{% endblock %}
